@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-HabitTracker.API-748a0905-7412-451a-a68f-98395ea1fd12</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+        <PackageReference Include="MediatR" Version="12.5.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.5">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.5"/>
+        <PackageReference Include="Microsoft.OpenApi" Version="1.6.24" />
+        <PackageReference Include="Scalar.AspNetCore" Version="2.3.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Application\Enumerable\" />
+      <Folder Include="Infrastructure\" />
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+</Project>
