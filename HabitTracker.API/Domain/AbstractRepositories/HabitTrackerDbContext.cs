@@ -1,3 +1,4 @@
+using HabitTracker.API.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace HabitTracker.API.Domain.AbstractRepositories;

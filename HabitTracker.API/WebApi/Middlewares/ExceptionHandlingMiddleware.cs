@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using System.Text.Json;
+using HabitTracker.API.Infrastructure.Exceptions;
 using Microsoft.AspNetCore.Http;
 
 namespace HabitTracker.API.WebApi.Middlewares
@@ -20,6 +21,10 @@ namespace HabitTracker.API.WebApi.Middlewares
             try
             {
                 await _next(context);
+            }
+            catch (EntityNotFoundException ex)
+            {
+                await HandleExceptionAsync(context, ex,HttpStatusCode.NotFound);
             }
             catch (Exception ex)
             {

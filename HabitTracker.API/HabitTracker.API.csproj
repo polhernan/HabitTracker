@@ -22,8 +22,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Application\Contexts\Users\DTOs\" />
+      <Folder Include="Application\Contexts\Users\Queries\Handlers\" />
       <Folder Include="Application\Enumerable\" />
-      <Folder Include="Infrastructure\" />
       <Folder Include="Migrations\" />
     </ItemGroup>
 </Project>

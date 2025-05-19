@@ -1,6 +1,8 @@
+using HabitTracker.API.Application.Contexts.Users;
+using HabitTracker.API.Application.Services;
 using HabitTracker.API.Domain.Shared;
 
-namespace HabitTracker.API.Domain;
+namespace HabitTracker.API.Domain.Entities;
 
 public class User : EntityState
 {
@@ -12,4 +14,22 @@ public class User : EntityState
     //? Relations
     public List<Habit>? Habits { get; set; }
     public List<HabitTemplate>? Templates { get; set; }
+
+    public User(SaveUserRequest request)
+    {
+        this.Id = Guid.NewGuid();
+        this.Email = request.Email;
+        this.Password = Crypter.Hash(request.Password);
+        this.Username = request.Username;
+        this.Created = DateTime.UtcNow;
+        this.Modified = DateTime.UtcNow;
+    }
+
+    public void UpdateUser(SaveUserRequest request)
+    {
+        this.Email = request.Email;
+        this.Password = Crypter.Hash(request.Password);
+        this.Username = request.Username;
+        this.Modified = DateTime.UtcNow;
+    }
 }

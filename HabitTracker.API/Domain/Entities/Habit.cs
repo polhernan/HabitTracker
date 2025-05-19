@@ -1,3 +1,4 @@
+using HabitTracker.API.Domain.Entities;
 using HabitTracker.API.Domain.Shared;
 
 namespace HabitTracker.API.Domain;
