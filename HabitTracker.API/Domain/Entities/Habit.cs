@@ -16,4 +16,10 @@ public class Habit : EntityState
     
     public Guid? TemplateId { get; set; }
     public HabitTemplate? Template { get; set; }
+
+
+    public Habit()
+    {
+        
+    }
 }

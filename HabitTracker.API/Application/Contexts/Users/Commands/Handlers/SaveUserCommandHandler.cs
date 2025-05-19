@@ -18,7 +18,7 @@ public class SaveUserCommandHandler : IRequestHandler<SaveUserCommand, User>
     }
     
     
-    public Task<User> Handle(SaveUserCommand request, CancellationToken cancellationToken)
+    public async Task<User> Handle(SaveUserCommand request, CancellationToken cancellationToken)
     {
         User? user;
         if (request.Request.Id == null || request.Request.Id.Equals(Guid.Empty))
@@ -37,6 +37,8 @@ public class SaveUserCommandHandler : IRequestHandler<SaveUserCommand, User>
         
         _context.Users.Add(user);
         
-        return Task.FromResult(user);
+        await _context.SaveChangesAsync();
+        
+        return user;
     }
 }

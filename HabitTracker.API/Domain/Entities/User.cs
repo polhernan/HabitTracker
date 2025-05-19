@@ -15,6 +15,12 @@ public class User : EntityState
     public List<Habit>? Habits { get; set; }
     public List<HabitTemplate>? Templates { get; set; }
 
+
+    public User()
+    {
+        
+    }
+
     public User(SaveUserRequest request)
     {
         this.Id = Guid.NewGuid();

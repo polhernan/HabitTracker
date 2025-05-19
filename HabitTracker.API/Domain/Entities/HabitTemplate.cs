@@ -16,4 +16,10 @@ public class HabitTemplate : EntityState
     public User? User { get; set; }
     
     public List<Habit>? Habits { get; set; }
+
+
+    public HabitTemplate()
+    {
+        
+    }
 }

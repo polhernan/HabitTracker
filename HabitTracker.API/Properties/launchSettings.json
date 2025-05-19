@@ -4,6 +4,8 @@
     "HabitTracker.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "scalar",
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Development"
       }
